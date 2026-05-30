@@ -15,8 +15,7 @@ data = pd.read_csv("amazon_reviews.csv")
 data["sentiment"] = data["overall"].apply(lambda x: "positive" if x >= 4 else "negative")
 
 # Remove missing values
-data = data.dropna(subset=["reviewText
-", "sentiment"])
+data = data.dropna(subset=["reviewText", "sentiment"])
 
 # Display Dataset Preview
 st.subheader("Dataset Preview")
